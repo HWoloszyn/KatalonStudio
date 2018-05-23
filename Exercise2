@@ -1,0 +1,19 @@
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://wedding-action.pl/')
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Start/a_Kontakt'))
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Pole1'),'Hania')
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/input_jformcontact_email'),'Lila2@interia.pl')
+	
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/input_jformcontact_subject'),'Czesc')
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/textarea_jformcontact_message'),'Pozdrawiam Cię serdecznie')
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Kontakt (4)/span_Start'))
+
+WebUI.verifyElementText(findTestObject('Object Repository/Zad2/Page_Start (3)/h2_Czym jest Wedding-Action'), 'Czym jest Wedding-Action?')
+
+WebUI.closeBrowser()
