@@ -1,0 +1,25 @@
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://wedding-action.pl/')
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Start/a_Kontakt'))
+
+for (def row = 1; row <= findTestData('Data Files/Zad4').getRowNumbers(); row++) 
+
+{
+    
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Pole1'), findTestData('Data Files/Zad4').getValue('name', row))
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/input_jformcontact_email'), findTestData('Data Files/Zad4').getValue('mail', row))
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/input_jformcontact_subject'), findTestData('Data Files/Zad4').getValue('subject', row))
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/textarea_jformcontact_message'), findTestData('Data Files/Zad4').getValue('text', row))
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Kontakt (1)/button_Wylij list'))
+
+}
+
+WebUI.closeBrowser()
+
+
