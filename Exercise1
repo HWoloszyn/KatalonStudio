@@ -1,0 +1,4 @@
+WebUI.openBrowser('')
+WebUI.navigateToUrl('https://leroymerlin.pl/')
+WebUI.setText(findTestObject('Object Repository/Page_Sklepy budowlano-dekoracyjne L/input_q'),'farba magnetyczna')
+WebUI.closeBrowser()
