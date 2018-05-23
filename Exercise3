@@ -1,0 +1,17 @@
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://wedding-action.pl/')
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Start/a_Kontakt'))
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Pole1'),GlobalVariable.Wartosc1)
+
+WebUI.setText(findTestObject('Object Repository/Zad2/Page_Start/Page_Kontakt/input_jformcontact_email'),GlobalVariable.Wartosc2)
+	
+resultStr = WebUI.getText(findTestObject('Object Repository/Zad2/Page_Kontakt (1)/a_kontaktwedding-action.pl'))
+
+println(resultStr)
+
+WebUI.click(findTestObject('Object Repository/Zad2/Page_Kontakt (1)/button_Wylij list'))
+
+WebUI.closeBrowser()
